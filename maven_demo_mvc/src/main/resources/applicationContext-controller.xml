@@ -30,7 +30,7 @@
 	</bean>
 	
 	<!-- 自动搜索@Controller标注的类 -->
-	<context:component-scan base-package="cn.com.dotsun.business.web.action" />
+	<context:component-scan base-package="maven.demo.mvc.controller" />
 	
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
