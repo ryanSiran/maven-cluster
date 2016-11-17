@@ -31,6 +31,8 @@
     <mysql.version>5.1.29</mysql.version>
     <!-- jdk版本号 -->
     <jdk.version>7.0</jdk.version>
+    <!-- commons-lang版本号 -->
+    <commons.lang>2.6</commons.lang>
   </properties>
   
   <dependencies>
@@ -80,6 +82,25 @@
   		<artifactId>spring-web</artifactId>
   		<version>${spring.version}</version>
   	</dependency>
+  	
+  	 <!-- 日志文件管理包 -->
+     <!-- log start -->
+     <dependency>
+         <groupId>log4j</groupId>
+         <artifactId>log4j</artifactId>
+         <version>${log4j.version}</version>
+     </dependency>
+     <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-api</artifactId>
+         <version>${slf4j.version}</version>
+     </dependency>
+     <dependency>
+         <groupId>org.slf4j</groupId>
+         <artifactId>slf4j-log4j12</artifactId>
+         <version>${slf4j.version}</version>
+     </dependency>
+     <!-- log end -->
   	
   	<!-- 单元测试依赖包 -->
   	<dependency>
@@ -133,6 +154,13 @@
         <version>${jdk.version}</version>  
         <scope>provided</scope>  
     </dependency>
+    
+    <!-- commons-lang包 -->
+    <dependency>
+	    <groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+    	<version>${commons.lang}</version>
+	</dependency>
     
   </dependencies>
   
