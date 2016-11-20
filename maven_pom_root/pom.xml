@@ -11,6 +11,7 @@
     <module>maven_base_api</module>
     <module>maven_base_service</module>
     <module>maven_base_web</module>
+    <module>maven_general_study</module>
   </modules>
 
   <!-- 各版本的配置文件 -->
