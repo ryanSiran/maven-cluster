@@ -27,11 +27,32 @@ public class QuickSort {
 	 * @param end  
 	 */
 	public int[] quickSortMethod(int[] nums, int start, int end){
+		if(start < end){
+			int base = nums[start];
+			int temp;
+			int i = start, j = end;
+			do{
+				while((nums[i] < base) && (i < end)){
+					i++;
+				}
+				while((nums[j] > base) && (j > start)){
+					j--;
+				}
+				if(i <= j){
+					temp = nums[i];
+					nums[i] = nums[j];
+					nums[j] = temp;
+					i++;
+					j--;
+				}
+			}while(i < j);
+			if(start < j){
+				quickSortMethod(nums, start, j);
+			}else if(end > i){
+				quickSortMethod(nums, i, end);
+			}
+		}
 		return nums;
-	}
-	
-	public void quickSortDemo1(){
-		int[] a = {49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
 	}
 	
 }
