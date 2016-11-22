@@ -22,6 +22,30 @@ public class ShellSort {
 		
 		插入排序后，排序完成。
 	 */
+	public int[] shellSortMethod(int[] nums){
+		double point = nums.length;
+		int temp = 0;
+		
+		while (true) {
+			point = Math.ceil(point/2);
+			int rise = (int) point;
+			for(int x = 0; x < rise; x++){
+				for(int i = x + rise; i < nums.length; i += rise){
+					int j = i - rise;
+					temp = nums[i];
+					for(; j >= 0 && temp < nums[j]; j -= rise){
+						nums[j+rise] = nums[j];
+					}
+					nums[j+rise] = temp;
+				}
+			}
+			if(rise == 1){
+				break;
+			}
+		}
+		
+		return nums;
+	}
 	
 	public void shellSortDemo1(){
 		int[] a = {49,38,65,97,76,13,27,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
